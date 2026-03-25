@@ -20,6 +20,10 @@ public class PilhaArray implements Pilha{
         return topo == -1;
     }
 
+    public void emptyArray(){
+        topo = -1;
+    }
+
     public Object top() throws PilhaVaziaExcecao {
         if (isEmpty()) throw new PilhaVaziaExcecao("Pilha Vazia");
         return array[topo];
