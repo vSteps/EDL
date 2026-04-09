@@ -65,4 +65,20 @@ public class FilaListaLigada {
     public boolean isEmpty() {
         return tamanho == 0;
     }
+
+    public static void main(String[] args) {
+        FilaListaLigada fila = new FilaListaLigada();
+        fila.dequeue(); // Deve lançar uma exceção de fila vazia
+        fila.enqueue(1);
+        fila.enqueue(2);
+        fila.enqueue(3);
+
+        System.out.println(fila.dequeue()); // Imprime 1
+        System.out.println(fila.dequeue()); // Imprime 2
+        System.out.println(fila.size());    // Imprime 1
+        System.out.println(fila.isEmpty()); // Imprime false
+        System.out.println(fila.dequeue()); // Imprime 3
+        System.out.println(fila.isEmpty()); // Imprime true
+
+    }
 }
